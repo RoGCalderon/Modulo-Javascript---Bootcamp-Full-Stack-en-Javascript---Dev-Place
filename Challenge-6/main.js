@@ -8,7 +8,7 @@ function compraConIva(precio){
 console.log( "Usted debe pagar: "+ compraConIva(100));
 
 //En una sala de juegos existen tre salas: Consolas, Juegos 2D, Juegos 3D, Realidad Virtual. Si un usuario paga  4 créditos puede acceder a todas, si apga 3 solo podrá acceder a las tres primeras, si paga 2 a las dos primeras y si paga 1 solo a la primera sala.
-
+let creditos=parseInt(prompt("Ingrese su crédito(valor de 1 a 4"));
 function salasJuegos(creditos){
     switch (creditos){
       case 1: console.log("Usted sólo puede acceder a la primer sala");
@@ -44,6 +44,7 @@ console.log(tiendaCoches(3))
 //Si la compra está por encima de 300 hasta 500 euros le descuenta un 10%
 //Si la compra supera los 400 euros le descuenta un 15%
 
+let monto = parseInt(prompt("Ingrese el monto de su compra"));
 function descuento(monto){
     if(monto< 100){
         console.log("Usted no tiene descuento");
@@ -86,5 +87,7 @@ for(let contador=1; contador<=4;contador++){
 }
 
 console.log(suma);
+
+
 
 
