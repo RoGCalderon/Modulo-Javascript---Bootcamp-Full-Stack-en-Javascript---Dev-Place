@@ -9,6 +9,10 @@ class Persona{
         this.estadoCivil = estadoCivil;
     }
 
+    cambioEstado(value){
+        this.estadoCivil = value;
+    }
+
 }
 
 //--------------------------------
@@ -21,6 +25,10 @@ class Empleado extends Persona{
         this.incorporacion = incorporacion;
         this.despacho = despacho;
     }
+    reasignarDespacho(value){
+        this.despacho = value;
+    }
+    
 }
 
 let empleado1 = new Empleado ("Angela","Pereira",35203965,'casada', 2010, 4);
@@ -34,7 +42,9 @@ class Estudiante extends Persona{
         super(nombre, apellido, documento,estadoCivil);
         this.curso = curso;
     }
-
+    nuevoCurso(value){
+        this.curso = value;
+    }
 }
 
 let estudiante1 = new Estudiante( "Rocio","Calderón",37586965,"soltera","JavaScript")
@@ -42,10 +52,13 @@ console.log(estudiante1)
 
 //---------------------------------------
 
-class Profesor extends Persona{
-    constructor(nombre, apellido, documento,estadoCivil,departamento){
-        super(nombre, apellido, documento,estadoCivil);
+class Profesor extends Empleado{
+    constructor(nombre, apellido, documento,estadoCivil,incorporacion,despacho,departamento){
+        super(nombre, apellido, documento,estadoCivil,incorporacion,despacho);
         this.departamento = departamento;
+    }
+    cambioDepartamento(value){
+        this.departamento = value;
     }
     
 }
@@ -55,9 +68,9 @@ console.log(profesor1);
 
 //----------------------------------------
 
-class Servicio extends Persona{
-    constructor(nombre, apellido, documento,estadoCivil,seccion){
-        super(nombre, apellido, documento,estadoCivil)
+class Servicio extends Empleado{
+    constructor(nombre, apellido, documento,estadoCivil,incorporacion,despacho,seccion){
+        super(nombre, apellido, documento,estadoCivil,incorporacion,despacho)
         this.seccion = seccion;
     }
 
